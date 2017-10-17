@@ -5,15 +5,22 @@
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
   </head>
-
-  <body ng-controller="ContactsController">
-    <div>
-      //form to add contact here
-    </div>
-
+<body>
+    <div ng-app='contacts' ng-controller='ContactsController'>
+        <div>
+        <h1>Please enter your Info</h1>
+            <form name='userForm' ng-submit='addNew(userForm)'>
+                <input placeholder='Name' ng-model='userForm.name'/>
+                <input placeholder="Phone" ng-model='userForm.phone'/>
+                <input placeholder="Address" ng-model='userForm.address'/>
+                <input placeholder='Image Url' ng-model='userForm.url'/>
+            <button type='submit'>Done</button>
+        </form>
+        </div>
     <div ng-repeat="contact in contacts">
       //contact name, phone, address, etc in {{}} and we can style it however
     </div>
+</div>
   </body>
 
   <script type="text/javascript" src="app.js"></script>
