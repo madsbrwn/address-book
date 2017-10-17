@@ -3,10 +3,10 @@ app.controller('ContactsController', mainCtrl);
 
 function mainCtrl($scope)
 {
-    $scope.contacts = []
+    $scope.usercontacts = []
     $scope.addNew = function (user) {
         
-        $scope.contacts.push({
+        $scope.usercontacts.push({
                           name: user.name,
                           photo: user.url,
                           address: user.address,
