@@ -10,7 +10,7 @@ function mainCtrl($scope)
                           name: user.name,
                           photo: user.url,
                           address: user.address,
-                          phone: user.phone,
+                          phone: user.phone
                           }); /* [1] */
         user.name="";
         user.url="";
