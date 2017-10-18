@@ -20,6 +20,20 @@ function mainCtrl($scope)
         contact.email="";
         contact.address="";
     };
+  $scope.remove=function()
+    {
+       var oldlist=$scope.usercontacts;
+        $scope.usercontacts=[];
+        angular.forEach(oldlist,function(x)
+                        {
+                        if(!x.done)
+                        {
+                        $scope.usercontacts.push(x);
+                        }
+                        })
+        
+    };
+
 }
 
   function contactsDirective () {
