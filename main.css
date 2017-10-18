@@ -1,4 +1,33 @@
-input
+body {
+  max-width: 800px;
+  margin: auto;
+}
+
+input, button
 {
-    border-radius:6px;
+  border: 0px;
+  border-radius:0px;
+}
+
+.col {
+  display: inline-flex;
+}
+
+.contactList {
+  list-style: none;
+}
+
+.contactList > li {
+  max-width: 600px;
+}
+
+.contact > span > img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.contactTitle {
+  display: inline-flex;
 }

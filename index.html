@@ -7,20 +7,26 @@
   </head>
 <body>
     <div ng-app='contacts' ng-controller='ContactsController'>
-        <div>
-        <h1>Please enter your Info</h1>
-            <form name='userForm' ng-submit='addNew(userForm)'>
-                <input placeholder='Name' ng-model='userForm.name'/>
-                <input placeholder="Phone" ng-model='userForm.phone'/>
-                <input placeholder="Address" ng-model='userForm.address'/>
-                <input placeholder='Photo' ng-model='userForm.url'/>
-            <button type='submit'>Done</button>
+      <h1 >Enter contact info:</h1>
+      <div class="col">
+          <form name='userForm' ng-submit='addNew(userForm)'>
+              <input placeholder='Name' ng-model='userForm.name'/><br>
+              <input placeholder='Photo' ng-model='userForm.url'/><br>
+              <input placeholder="Phone" ng-model='userForm.phone'/><br>
+              <input placeholder="Email" ng-model='userForm.email'/><br>
+              <input placeholder="Address" ng-model='userForm.address'/><br>
+            <button type='submit'>Add Contact</button>
         </form>
-        </div>
-    <div ng-repeat="contact in usercontacts">
-      //contact name, phone, address, etc in {{}} and we can style it however
+      </div>
+
+      <div class="col">
+        <ul class="contactList">
+          <li ng-repeat="contact in usercontacts">
+            <user contact='contact'>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
   </body>
 
   <script type="text/javascript" src="app.js"></script>
