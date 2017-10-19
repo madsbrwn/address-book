@@ -54,7 +54,7 @@ function mainCtrl($scope)
           '{{contact.phone}}<br>' +
           '<a href="mailto:{{contact.email}}">{{contact.email}}</a><br>' +
           '{{contact.address}}' +
-          //something to delete
+          '<input type="checkbox" ng-model="contact.done">'+
         '</div>'
       ),
       link: link
