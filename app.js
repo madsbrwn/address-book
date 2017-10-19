@@ -31,7 +31,7 @@ function mainCtrl($scope)
                         $scope.usercontacts.push(x);
                         }
                         })
-        
+
     };
 
 }
@@ -45,15 +45,17 @@ function mainCtrl($scope)
       replace: 'true',
       template: (
         '<div class="contact">' +
-          '<span class="contactTitle">' +
-            '<img ng-src="{{contact.url}}" />' +
-          '</span>' +
-          '<span class="contactTitle">' +
-            '<h4>{{contact.name}}</h4>' +
-          '</span>' +
+          '<div>' +
+            '<span class="contactTitle">' +
+              '<img ng-src="{{contact.url}}" />' +
+            '</span>' +
+            '<span class="contactTitle">' +
+              '<h4>{{contact.name}}</h4>' +
+            '</span>' +
+          '</div>' +
           '{{contact.phone}}<br>' +
           '<a href="mailto:{{contact.email}}">{{contact.email}}</a><br>' +
-          '{{contact.address}}' +
+          '{{contact.address}}<br>' +
           '<input type="checkbox" ng-model="contact.done">'+
         '</div>'
       ),
