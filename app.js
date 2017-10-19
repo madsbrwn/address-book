@@ -13,6 +13,7 @@ function mainCtrl($scope)
                           phone: contact.phone,
                           email: contact.email,
                           address: contact.address,
+			  done:false
                           });
         contact.name="";
         contact.url="";
